@@ -21,15 +21,13 @@ function writePassword() {
 
   var password = generatePassword();
 
-
-
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-// generateBtn.addEventListener("click".writePassword);
+
 
 
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -62,6 +60,7 @@ var passLength = "";
       generatePassword(specialCharacters)
     };
   
+    generateBtn.addEventListener("click".writePassword);
 
     var password = "";
     // for (var index = 1; index)
@@ -69,7 +68,7 @@ var passLength = "";
       var character = Math.floor(Math.random() * (128 - 8))
       password += numericCharacters[0], specialCharacters[0], lowerCharacters[0], upperCharacters[0];
     }
-    console.log(password)
+    // console.log(password)
     // return password;
   // }
 
