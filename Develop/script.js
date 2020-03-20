@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 
@@ -20,7 +19,6 @@ function writePassword() {
   var specialCharacters = prompt("Do you wish to include special characters?");
   console.log(specialCharacters);
 
-
   var password = generatePassword();
 
 
@@ -29,43 +27,49 @@ function writePassword() {
 
   passwordText.value = password;
 
-
 }
 
-generateBtn.addEventListener("click". writePassword);
+// generateBtn.addEventListener("click".writePassword);
 
 
-
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
+var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', ')', '(', '-', '_', '=', '+', '`', '~', ',', '<', '.', '>', '/', '?', ';', ':', '\\'];
 var lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var passLength = "";
 
 
-var password = generatePassword(numericCharacters, specialCharacters, lowerCharacters, upperCharacters, passLength);
+// var password = generatePassword(numericCharacters, specialCharacters, lowerCharacters, upperCharacters, passLength);
 
-function generatePassword(passLength, numericCharacters, specialCharacters, lowerCharacters, upperCharacters, ){
-  pass = "";
-  
-    
-  if (lowerCharacters == true) {
-    generatePassword(lowerCharacters)
-  };
-  if (upperCharacters == true) {
-    generatePassword(upperCharacters)
-  };
-  if (numericCharacters == true) {
-    generatePassword(numericCharacters)
-  };
-  if (specialcharacters == true) {
-    generatePassword(specialCharacters)
-  };
-  
-  
-  console.log(password);
-  return password;
-  }
+// function generatePassword(passLength, numericCharacters, specialCharacters, lowerCharacters, upperCharacters, ) {
+//   pass = "";
+
+
+
+
+  function generatePassword() {
+
+    if (lowerCharacters == true) {
+      generatePassword(lowerCharacters)
+    };
+    if (upperCharacters == true) {
+      generatePassword(upperCharacters)
+    };
+    if (numericCharacters == true) {
+      generatePassword(numericCharacters)
+    };
+    if (specialcharacters == true) {
+      generatePassword(specialCharacters)
+    };
   
 
+    var password = "";
+    // for (var index = 1; index)
+      // console.log(password); index < parseInt(userPassLength); index++){
+      var character = Math.floor(Math.random() * (128 - 8))
+      password += numericCharacters[0], specialCharacters[0], lowerCharacters[0], upperCharacters[0];
+    }
+    console.log(password)
+    // return password;
+  // }
 
