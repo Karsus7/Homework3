@@ -1,14 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword(passLength, numericCharacters, specialCharacters, lowerCharacters, upperCharacters, ){
 
-}
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
-var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', ')', '(', '-', '_', '=', '+', '`', '~', ',', '<', '.', '>', '/', '?', ';', ':', '\\'];
-var lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var passLength = "";
+var passLength = prompt("How long will your password be? It must be between 8 and 128 characetrs.");
+var confirmCharacters = confirm("Would you like to include lowercase letters?");
+var confirmUppercase = confirm("Would you like to include uppercase letters?");
+var numberConfirm = confirm("Would you like to include number?");
+var specialConfirm = confirm("Would you like to include special characters?");
 
 function writePassword() {
   var passLength = prompt("How long will your password be? It must be between 8 and 128 characetrs.");
@@ -36,17 +34,38 @@ function writePassword() {
 
 generateBtn.addEventListener("click". writePassword);
 
-var passLength = prompt("How long will your password be? It must be between 8 and 128 characetrs.");)
-var confirmCharacters = confirm("Would you like to include lowercase letters?");
-var confirmUppercase = confirm("Would you like to include uppercase letters?");
-var numberConfirm = confirm("Would you like to include number?");
-var specialConfirm = confirm("Would you like to include special characters?");
 
-//global variables meaning at the very top of our code
 
+var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
+var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', ')', '(', '-', '_', '=', '+', '`', '~', ',', '<', '.', '>', '/', '?', ';', ':', '\\'];
+var lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var passLength = "";
 
 
 var password = generatePassword(numericCharacters, specialCharacters, lowerCharacters, upperCharacters, passLength);
 
-// var PassText = document.querySelector("password");
-// PassText.value = password;
+function generatePassword(passLength, numericCharacters, specialCharacters, lowerCharacters, upperCharacters, ){
+  pass = "";
+  
+    
+  if (lowerCharacters == true) {
+    generatePassword(lowerCharacters)
+  };
+  if (upperCharacters == true) {
+    generatePassword(upperCharacters)
+  };
+  if (numericCharacters == true) {
+    generatePassword(numericCharacters)
+  };
+  if (specialcharacters == true) {
+    generatePassword(specialCharacters)
+  };
+  
+  
+  console.log(password);
+  return password;
+  }
+  
+
+
