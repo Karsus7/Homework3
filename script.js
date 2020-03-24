@@ -63,7 +63,7 @@ function writePassword() {
       password.push(randomItem(numericCharacters, specialCharacters, lowerCharacters, upperCharacters));
       console.log(password)
     }
-    return password {
-    generateBtn.addEventListener("click".writePassword);
-    }
+    // return password {
+    //   generateBtn.addEventListener("click".writePassword);
+    //   }
 
